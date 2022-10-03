@@ -1,10 +1,35 @@
 # Paper-Assistant
 
-文献推送助手 项目组 会议记录
+
+
+# PRD文档
+
+[‌‍⁣‌⁢⁢⁣‍‬⁤⁤‌‬⁢⁡⁣⁣⁤‌﻿‍‍⁡﻿‍‍‍‍⁡﻿‬⁤﻿⁣‍⁣‍﻿⁣‬⁣‬⁣﻿⁣‬文献推送助手 PRD - 飞书云文档 (feishu.cn)](https://bingyan.feishu.cn/docs/doccnpuWjY5H5bdBQRiZvUiE2Re#JORyhf)
+
+
+
+# 组内分工
+
+- 产经：李桢
+- UI：朱明泽
+- 前端：李桢 张伟泽
+- 后端：马南海 邱启航
+
+
+
+# 原型图（墨刀）
+
+[文献推送助手 (modao.cc)](https://modao.cc/app/ff7e83938e6055efc3a0908976ef1fd6f441cf86#screen=skvi1oifbrz6icm)
+
+
+
+# UI设计（Figma）
+
+[文件助手 – Figma](https://www.figma.com/file/er5OndO1KmJNDvxziWI2RV/文件助手?node-id=0%3A1)
+
+
 
 # 第一次组会 2022/9/20
-
-
 
 ## 会议目标
 
@@ -13,7 +38,7 @@
 
 
 
-### 1.讨论原型和功能逻辑
+## 讨论原型和功能逻辑
 
 **原型的变动以及原因：**
 
@@ -91,8 +116,6 @@ MVP只做期刊
 
 期刊要显示关注按钮，类似下图知乎用户，显示期刊期号和影响因子
 
-![img](https://bingyan.feishu.cn/space/api/box/stream/download/asynccode/?code=NjM0YmU1NGI3OGJhMDI3Y2RjOGRiYzI4MjBkZWM5YzZfaGoxZFRoZlN1aVl6NEEyVG51Q0FQQ2I5M3ZmZzFjTDVfVG9rZW46Ym94Y242cm42b2N1UkZERGd4MTIxOW9wZGtnXzE2NjQyODAxNDE6MTY2NDI4Mzc0MV9WNA)
-
 关键词 只显示一行，多的折叠，可以设置展开按钮
 
 新增下载按钮
@@ -106,16 +129,65 @@ MVP只做期刊
 - 长按文献则进行操作，那么显示分享、删除、移动
 - 长按文件夹对文件夹进行删除、重命名操作
 - 取消批量下载
-- 新增文件夹和文件夹排列逻辑如下图
-
-![img](https://bingyan.feishu.cn/space/api/box/stream/download/asynccode/?code=MDk2NWU1MDIwODk0YzRhMjNhNDRiZTZjOGQ4MjA3MzRfWmlpcmFjV1hDeWkyNzh5OXNrQlVyZ2hNdEpjUUR0NXJfVG9rZW46Ym94Y25jWjN0c1FvSEZXaUJQUzZzc3RobmRnXzE2NjQyODAxNDE6MTY2NDI4Mzc0MV9WNA)
 
 
 
-我的页进行的改动
+**我的页进行的改动**
 
-删除绑定邮箱
+- 删除绑定邮箱
 
-订阅入口移到我的页
+- 订阅入口移到我的页
 
-联系我们改为关于我们
+- 联系我们改为关于我们
+
+
+
+# 第二次组会 2022/10/1
+
+## 会议目标
+
+产品原型讨论（初始化机制）
+
+爬虫需求文档演示（web of science sci文献爬取）
+
+设计稿确认
+
+接口文档确认
+
+下一步项目任务排期（前端页面 后端服务器上云）
+
+原型确定和展示
+
+
+
+## 产品原型讨论
+
+初始化机制
+
+![img](https://bingyan.feishu.cn/space/api/box/stream/download/asynccode/?code=NzAxNjk1ZTEwOWEyZTAyN2NkOWRkOGQyNDM0MWZmMjdfSVBhakdkaHRuTTRVZUZCRzZUMFlDZW82cmQzcmxOMmpfVG9rZW46Ym94Y25hcW9iUG5FZHB4WFo3ck9RT2xBTm1jXzE2NjQ3Nzk1Nzk6MTY2NDc4MzE3OV9WNA)
+
+
+
+![img](https://bingyan.feishu.cn/space/api/box/stream/download/asynccode/?code=NmU1NTczYmViODYyYmM2Y2RhNjViY2M5MjM3ZjY2ZDdfVTBZM25qTzU1TktGNnF5Q3RaNXh5MkQwcE1vNTJvUDlfVG9rZW46Ym94Y255RFJhdUJBZlRNVllObTdsd09HUU5jXzE2NjQ3Nzk1Nzk6MTY2NDc4MzE3OV9WNA)
+
+
+
+![img](https://bingyan.feishu.cn/space/api/box/stream/download/asynccode/?code=YzBjZTQ1MDdmMzA5ZTg3ODcyMGRlYzUzMDNhOWRjYTRfWTZXeks4MVhVYzFjQ0o2T1MwYm5PaVBhTGN6c2hRdVFfVG9rZW46Ym94Y25BR3JwMlZndVdrVHNXOE9FUFA5SkRjXzE2NjQ3Nzk1Nzk6MTY2NDc4MzE3OV9WNA)
+
+
+
+**总结**
+
+首页初始化
+
+订阅按钮不出现在首页，而是出现一个一次性的按钮跳转到订阅页
+
+需要假数据？
+
+
+
+收藏初始化
+
+批量分享落地页，用户完成收藏到文件夹之后，跳转到收藏界面
+
+文献详情页，用户完成收藏后，弹窗提示成功，继续回到文献详情页中（注意逻辑区分）
