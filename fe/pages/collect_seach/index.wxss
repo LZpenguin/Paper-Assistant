@@ -1,0 +1,23 @@
+page {
+  background-color: #F0F1F5;
+}
+.search_box {
+  padding: 8rpx 32rpx 24rpx;
+}
+.no_result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 300rpx;
+}
+.no_result image {
+  width: 330rpx;
+  height: 310rpx;
+}
+.bottom_number {
+  display: flex;
+  justify-content: center;
+  color: #979797;
+  font-size: 28rpx;
+  margin-top: 50rpx;
+}

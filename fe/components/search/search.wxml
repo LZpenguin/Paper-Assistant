@@ -1,0 +1,18 @@
+<view class="search">
+  <view class="search_real" wx:if="{{search}}">
+    <viiew class="input_box">
+      <view class="icon_left" bindtap="search">
+        <image src="../../icons/public/search.png"></image>
+      </view>
+      <input type="text" class="search_input" auto-focus="true" data-search="0" bindinput="bindInput" value="{{input}}" bindconfirm="search"/>
+      <view class="icon_right">
+        <image src="../../icons/public/search_cancel.png" bindtap="clear"></image>
+      </view>
+    </viiew>
+    <view class="search_cancel" bindtap="toggle" data-search="0">取消</view>
+  </view>
+  <view class="search_fake" wx:else bindtap="{{enable == true?'jump':'toggle'}}" data-search="1" data-jump="{{jump}}">
+    <image src="../../icons/public/search.png" class="search_icon"></image>
+    <text>{{title}}</text>
+  </view>
+</view>

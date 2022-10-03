@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/user/index",
+    "pages/detail/index",
+    "pages/shared/index",
+    "pages/aboutUs/index",
+    "pages/my_subscribe/index",
+    "pages/periodical_navigator/index",
+    "pages/periodical_class/index",
+    "pages/periodical_detail/index",
+    "pages/collect/index",
+    "pages/collect_edit/index",
+    "pages/collect_paper_edit/index",
+    "pages/outer/index",
+    "pages/add_keywords/index",
+    "pages/collect_seach/index",
+    "pages/periodical_search/index",
+    "pages/receive/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#F0F1F5",
+    "navigationBarTitleText": "文献助手",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#529bfc",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "icons/tabBar/index-0.png",
+      "selectedIconPath": "icons/tabBar/index-1.png"
+    },{
+      "pagePath": "pages/collect/index",
+      "text": "收藏",
+      "iconPath": "icons/tabBar/collect-0.png",
+      "selectedIconPath": "icons/tabBar/collect-1.png"
+    },{
+      "pagePath": "pages/user/index",
+      "text": "我的",
+      "iconPath": "icons/tabBar/user-0.png",
+      "selectedIconPath": "icons/tabBar/user-1.png"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "添加关键词",
+  "usingComponents": {
+      "Search": "/components/search/search"
+  }
+}

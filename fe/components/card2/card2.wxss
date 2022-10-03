@@ -1,0 +1,62 @@
+.card2 {
+  display: flex;
+  padding: 24rpx 32rpx;
+  background-color: #fff;
+}
+.card2 .cover {
+  width: 144rpx;
+  height: 192rpx;
+  margin-right: 16rpx;
+}
+.card2 .info {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card2 .info .header {
+  display: flex;
+  flex-direction:column;
+  align-items: left;
+}
+.card2 .info .header .row_1 {
+  display: flex;
+  align-items: center;
+}
+.card2 .info .header .row_2 {
+  font-size: 28rpx;
+  color: #888888;
+}
+.card2 .info .header .name {
+  font-size: 28rpx;
+  font-weight: 700;
+  margin-right: 20rpx;
+}
+.card2 .info .header .month {
+  padding: 1rpx 8rpx 3rpx;
+  font-size: 22rpx;
+  border: 2rpx solid #C4C4C4;
+  border-radius: 8rpx;
+  color: #979797;
+}
+.card2 .info .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.card2 .info .footer .if {
+  font-size: 24rpx;
+  color: #464646;
+}
+.card2 .info .footer .subscribe {
+  padding: 6rpx 24rpx 10rpx;
+  background-color: #627AF8;
+  border-radius: 8rpx;
+  color: #fff;
+}
+.card2 .info .footer .subscribe_2 {
+  padding: 6rpx 24rpx 10rpx;
+  background-color: #DDDDDD;
+  border-radius: 8rpx;
+  color: #979797;
+}

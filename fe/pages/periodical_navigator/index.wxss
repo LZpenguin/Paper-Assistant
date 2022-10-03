@@ -1,0 +1,52 @@
+page {
+  background-color: #F0F1F5;
+}
+.page {
+  display: block;
+  padding: 16rpx 32rpx;
+  background-color: #fff;
+}
+.box {
+  padding: 8rpx 32rpx 24rpx;
+}
+.class {
+  display: flex;
+  align-items: center;
+  padding: 24rpx 0;
+  border-bottom: 3rpx solid #EEEFF3
+}
+.class_box:last-child .class{
+  border-bottom: none;
+}
+.class>text {
+  flex: 1 1 0;
+}
+.checked>image {
+  width: 24rpx;
+  height: 12rpx;
+}
+.unchecked>image {
+  width: 12rpx;
+  height: 24rpx;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20rpx 0 0;
+}
+.tags li {
+  margin-left: 20rpx;
+  margin-bottom: 10rpx;
+}
+.tags .tag {
+  display: inline-block;
+  padding: 6rpx 24rpx;
+  border: 2rpx solid #627AF8;
+  border-radius: 40rpx;
+  color: #627AF8;
+  font-size: 28rpx;
+  max-width: 600rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

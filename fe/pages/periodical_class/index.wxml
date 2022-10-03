@@ -1,0 +1,3 @@
+<view wx:for="{{periodicalList}}" wx:key="name">
+  <Card2 class="card2" name="{{item.name}}" enName="{{item.enName}}" sub="{{item.sub}}" cycle="{{item.cycle}}" fif="{{item.fif}}" zif="{{item.zif}}" img="{{item.img}}"></Card2>
+</view>

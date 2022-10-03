@@ -1,0 +1,93 @@
+page {
+  background-color: #F0F1F5;
+}
+.my_periodical {
+  padding: 40rpx 32rpx 0;
+  background-color: #fff;
+  margin-bottom: 8rpx;
+}
+.my_periodical .header {
+  height: 42rpx;
+  display: flex;
+  align-items: center;
+  color: #464646;
+  margin-bottom: 32rpx;
+}
+.my_periodical .my_periodical_icon{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 12rpx;
+}
+.periodicalList {
+  display: flex;
+  flex-flow: row wrap;
+}
+.periodicalList>view {
+  margin-right: 41rpx;
+}
+.periodicalList>view:nth-child(4n+0) {
+  margin-right: 0;
+}
+.periodical_add {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 141rpx;
+  height: 188rpx;
+  border: 3rpx solid #C4C4C4;
+  border-radius: 8rpx;
+  margin-bottom: 40rpx;
+}
+.periodical_add>image {
+  display: block;
+  width: 34rpx;
+  height: 34rpx;
+  margin-bottom: 15rpx;
+}
+.periodical_add>text {
+  font-size: 28rpx;
+  color: #888888;
+}
+
+.my_keywords {
+  padding: 40rpx 32rpx 20rpx;
+  background-color: #fff;
+}
+.my_keywords .header {
+  height: 42rpx;
+  display: flex;
+  align-items: center;
+  color: #464646;
+  margin-bottom: 32rpx;
+}
+.my_keywords .header>text {
+  padding-bottom: 6rpx;
+}
+.my_keywords_icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 12rpx;
+}
+.keywordsList {
+  display: flex;
+  flex-wrap: wrap;
+}
+.keywordsList>li {
+  font-size: 28rpx;
+  color: #627AF8;
+  padding: 6rpx 24rpx;
+  border: 2rpx solid #627AF8;
+  border-radius: 40rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}
+.keywordsList .keywords_add {
+  border-color: #888888;
+  font-size: 28rpx;
+  color: #888888;
+}
+.keywords_add>image {
+  width: 20rpx;
+  height: 20rpx;
+}

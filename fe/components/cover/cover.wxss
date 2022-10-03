@@ -1,0 +1,28 @@
+.cover {
+  position: relative;
+  display: inline-block;
+  width: 141rpx;
+  margin-bottom: 40rpx;
+}
+.cover>image {
+  display: block;
+  width: 141rpx;
+  height: 188rpx;
+  margin-bottom: 12rpx;
+}
+.cover>text {
+  display: block;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 28rpx;
+  color: #464646;
+}
+.impact_factor {
+  position: absolute;
+  top: 2rpx;
+  left: 4rpx;
+  font-size: 22rpx;
+  color: #fff;
+}

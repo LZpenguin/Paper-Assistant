@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "历史分享",
+  "usingComponents": {
+      "Card": "/components/card/card",
+      "Search": "/components/search/search"
+  }
+}

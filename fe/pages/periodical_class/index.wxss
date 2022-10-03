@@ -1,0 +1,7 @@
+page {
+  background-color: #F0F1F5;
+}
+.card2 {
+  display: block;
+  margin-bottom: 8rpx;
+}

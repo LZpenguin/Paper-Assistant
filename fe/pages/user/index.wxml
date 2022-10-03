@@ -1,0 +1,23 @@
+<view class="info_box">
+  <view class="avatar_border">
+    <image src="{{userInfo.avatarUrl}}" class="avatar"></image>
+  </view>
+  <view class="nickname">{{userInfo.nickName}}</view>
+</view>
+<view class="navigator_box">
+    <view class="my_subscribe" bindtap="jump_my_subscribe">
+      <image src="../../icons/user/my_subscribe.png"></image>
+        <text>我的订阅</text>
+      <image src="../../icons/user/bigger_than.png" class="bigger_than"></image>
+    </view>
+    <view class="shared" bindtap="jump_shared">
+      <image src="../../icons/user/shared.png"></image>
+      <text>历史分享</text>
+      <image src="../../icons/user/bigger_than.png" class="bigger_than"></image>
+    </view>
+    <view class="about_us" bindtap="jump_aboutUs">
+      <image src="../../icons/user/about_us.png"></image>
+      <text>关于我们</text>
+      <image src="../../icons/user/bigger_than.png" class="bigger_than"></image>
+    </view>
+</view>

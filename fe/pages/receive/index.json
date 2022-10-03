@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "接收分享",
+  "usingComponents": {
+    "Card": "/components/card/card"
+  }
+}

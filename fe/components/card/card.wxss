@@ -1,0 +1,58 @@
+.card {
+  box-sizing: border-box;
+  padding: 24rpx 32rpx;
+  background-color: #fff;
+  margin-bottom: 8rpx;
+}
+.card .src {
+  display: flex;
+  align-items: center;
+  height: 40rpx;
+  font-size: 28rpx;
+  color: #627AF8;
+  margin-bottom: 16rpx;
+}
+.card .src image {
+  width: 28rpx;
+  height: 24rpx;
+  margin-right: 4rpx;
+}
+.card .src .name {
+  margin-right: 16rpx;
+  padding-bottom: 4rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card .src .no {
+  font-size: 24rpx;
+  vertical-align: middle;
+  color: #888888;
+  padding: 0rpx 8rpx;
+  border: 2rpx solid #C4C4C4;
+  border-radius: 8rpx;
+}
+.card .r_title {
+  font-size: 32rpx;
+  font-weight: 700;
+  margin-bottom: 16rpx;
+}
+.card .author {
+  height: 34rpx;
+  display: flex;
+  align-items: center;
+  color: #888888;
+}
+.card .author>image {
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 8rpx;
+}
+.card .author>li {
+  margin-right: 12rpx;
+  font-size: 28rpx;
+  max-width: 120rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,6 @@
+<view class="search_box">
+  <Search title="搜索期刊" bind:searchValue="getValue"></Search>
+</view> 
+<view wx:for="{{result}}" wx:key="name">
+  <Card2 class="card2" name="{{item.name}}" enName="{{item.enName}}" sub="{{item.sub}}" cycle="{{item.cycle}}" fif="{{item.fif}}" zif="{{item.zif}}" img="{{item.img}}"></Card2>
+</view>

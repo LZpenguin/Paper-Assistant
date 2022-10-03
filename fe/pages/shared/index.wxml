@@ -1,0 +1,6 @@
+<view class="box">
+  <Search title="搜索分享过的文献" bind:searchValue="getSearch"></Search>
+</view>
+<ul class="sharedList">
+  <Card wx:for="{{result}}" wx:key="id" magazine="{{item.magazine}}" year="{{item.year}}" issue="{{item.issue}}" title="{{item.title}}" authors="{{item.authors}}" paper_id="{{item.id}}"></Card>
+</ul>

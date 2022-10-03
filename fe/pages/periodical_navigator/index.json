@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "核心期刊导航",
+  "usingComponents": {
+    "Search": "/components/search/search"
+  }
+}

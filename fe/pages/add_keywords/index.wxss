@@ -1,0 +1,52 @@
+page {
+  background-color: #F0F1F5;
+}
+.search_box {
+  padding: 8rpx 32rpx 24rpx;
+}
+.keywords_box {
+  margin: 0 32rpx;
+  padding: 12rpx 32rpx;
+  background-color: #fff;
+  border-radius: 8rpx;
+}
+.keywords_box .keyword {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 96rpx;
+  border-bottom: 3rpx solid #EEEFF3;
+}
+.keywords_box .keyword:last-child {
+  border-bottom: none;
+}
+.keywords_box .keyword .name_keyword {
+  font-size: 32rpx;
+  color: #111111;
+}
+.keywords_box .keyword .add_keyword {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  width: 128rpx;
+  height: 48rpx;
+  padding-bottom: 4rpx;
+  border-radius: 8rpx;
+  background-color: #627AF8;
+  color: #fff;
+  font-size: 28rpx;
+}
+.keywords_box .keyword .delete_keyword {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  width: 128rpx;
+  height: 48rpx;
+  padding-bottom: 4rpx;
+  border-radius: 8rpx;
+  background-color: #DDDDDD;
+  color: #888888;
+  font-size: 28rpx;
+}

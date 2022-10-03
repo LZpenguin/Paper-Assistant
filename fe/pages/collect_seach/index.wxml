@@ -1,0 +1,16 @@
+<view class="search_box">
+  <Search title="搜索收藏的文献" bind:searchValue="getSearch"></Search>
+</view>  
+
+<ul class="cardList">
+  <li wx:for="{{result}}" wx:key="name">
+    <Card magazine="{{item.magazine}}" year="{{item.year}}" issue="{{item.issue}}" paper_id="{{item.id}}" title="{{item.title}}" authors="{{item.authors}}"></Card>
+  </li>
+</ul>
+
+<view wx:if="{{result.length == 0}}" class="no_result">
+  <image src="../../icons/components/no_result.png"></image>
+</view>
+
+<view class="bottom_number">—— 搜索到{{result.length}}篇文献 ——</view>
+

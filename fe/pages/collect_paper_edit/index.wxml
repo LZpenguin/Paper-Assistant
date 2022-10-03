@@ -1,0 +1,67 @@
+<view wx:if="{{edit}}" class="edit_header">
+  <text class="cancel" bindtap="cancel">取消</text>
+  <text class="selected">已经选中 {{count}} 个文献</text>
+  <text class="all" bindtap="all">全选</text>
+</view>
+<view wx:if="{{edit}}" class="space_top"></view>
+<view class="cardList">
+  <view class="card_group" wx:for="{{paperList}}" wx:key="name">
+    <Card magazine="{{item.magazine}}" year="{{item.year}}" issue="{{item.issue}}" title="{{item.title}}" authors="{{item.authors}}" paper_id="{{item.id}}"></Card>
+    <view class="dot_box" bindtap="dotTap" data-id="{{item.id}}">
+      <view class="{{item.choosen?'dot-on':'dot-off'}}"></view>
+    </view> 
+  </view>
+</view>
+<view wx:if="{{edit}}" class="space_bottom"></view>
+<view wx:if="{{edit}}" class="edit_footer">
+  <view class="group"  bindtap="delete">
+    <image src="../../icons/collect_paper_edit/delete.png"></image>
+    <text>删除</text>
+  </view>
+  <view class="group"  bindtap="move">
+    <image src="../../icons/collect_paper_edit/move.png"></image>
+    <text>移动</text>
+  </view>
+  <button class="group shareBtn" open-type="share">
+    <image src="../../icons/collect_paper_edit/share.png"></image>
+    <text>分享</text>
+  </button>
+</view>
+
+<view class="to_move_group" wx:if="{{to_move}}">
+  <view class="cover"></view>
+  <view class="to_collect">
+    <view class="header">
+      <text class="count">将 {{count}} 个文件移动到</text>
+      <image class="cancel" src="../../icons/components/cancel.png" bindtap="cancel_move"></image>
+    </view>
+    <view class="folderList">
+      <view class="folder" wx:for="{{folderList}}" wx:key="name" bindtap="move_to" data-name="{{item.name}}">
+        <image class="folder_icon" src="../../icons/components/folder.png"></image>
+        <view class="info">
+          <view class="folder_name">{{item.name}}</view>
+          <view class="folder_info">
+            <view class="folder_count">收藏{{item.content.length}}篇</view>
+            <view class="update_time">更新于：今日</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="footer" bindtap="add_folder">
+      <image src="../../icons/components/new.png"></image>
+      <text>新建文件夹</text>
+    </view>
+  </view>
+</view>
+
+<view class="add_folder_box" wx:if="{{to_add_folder}}">
+  <view class="cover"></view>
+  <view class="add_folder">
+    <view class="title">请输入文件夹名称</view>
+    <input type="text" placeholder="文件夹名称不超过8个字" bindinput="bindInput"/>
+    <view class="func">
+      <text class="cancel" bindtap="cancel_add_folder">取消</text>
+      <text class="submit" bindtap="new_folder">创建</text>
+    </view>
+  </view>
+</view>

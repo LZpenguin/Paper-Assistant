@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "我的订阅",
+  "usingComponents": {
+    "Cover": "/components/cover/cover"
+  }
+}

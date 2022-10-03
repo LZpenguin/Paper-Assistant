@@ -1,0 +1,16 @@
+<view class="box">
+  <Search title="搜索期刊" enable="false" jump="/pages/periodical_search/index"></Search>
+</view>
+<ul class="page">
+  <view class="class_box"  wx:for="{{naviList}}" wx:key="name">
+    <view class="class {{index == checked?'checked':'unchecked'}}" bindtap="showClass" data-index="{{index}}">
+      <text>{{item.name}}</text>
+      <image src="../../icons/periodical_navi/{{index == checked?'checked.png':'unchecked.png'}}"></image>
+    </view>
+    <ul class="tags" wx:if="{{index == checked}}">
+      <li wx:for="{{item.content}}" wx:key="name" wx:for-item="item2">
+        <text class="tag" bindtap="jump_periodical_class" data-name="{{item.name}}" data-class="{{item2}}">{{item2}}</text>
+      </li>
+    </ul>
+  </view>
+</ul>

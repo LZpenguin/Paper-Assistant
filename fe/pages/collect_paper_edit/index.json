@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "农业经济学论文",
+  "usingComponents": {
+    "Card": "/components/card/card"
+  }
+}

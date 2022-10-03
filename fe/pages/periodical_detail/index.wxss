@@ -1,0 +1,68 @@
+page {
+  background-color: #F0F1F5;
+}
+.periodical_card {
+  display: flex;
+  padding: 24rpx 32rpx;
+  background-color: #fff;
+}
+.periodical_card .cover {
+  width: 144rpx;
+  height: 192rpx;
+  margin-right: 16rpx;
+}
+.periodical_card .info {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.periodical_card .info .ch_name {
+  font-weight: 700;
+  font-size: 32rpx;
+}
+.periodical_card .info .en_name {
+  font-size: 28rpx;
+  color: #888888;
+}
+.periodical_card .info .subscribe {
+  align-self: flex-end;
+  font-size: 32rpx;
+  padding: 6rpx 24rpx 10rpx;
+  background-color: #627AF8;
+  border-radius: 8rpx;
+  color: #fff;
+}
+.periodical_card .info .subscribe_2 {
+  align-self: flex-end;
+  padding: 6rpx 24rpx 10rpx;
+  background-color: #DDDDDD;
+  border-radius: 8rpx;
+  color: #979797;
+}
+.header {
+  height: 84rpx;
+  line-height: 84rpx;
+  padding: 0 32rpx;
+  font-size: 28rpx;
+  color:#888888;
+}
+.body {
+  display: block;
+  padding: 24rpx 32rpx;
+  background-color: #fff;
+}
+.body>li {
+  display: block;
+  margin-bottom: 24rpx;
+}
+.body>li:last-child {
+  margin-bottom: 0;
+}
+.key {
+  font-size: 28rpx;
+}
+.value {
+  font-size: 28rpx;
+  color: #464646;
+}

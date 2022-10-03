@@ -1,0 +1,22 @@
+<view class="card2" bindtap="jump_periodical_detail" data-magazine="{{name}}">
+  <image src="{{img}}" class="cover"></image>
+  <view class="info">
+    <view class="header">
+      <view class="row_1">
+        <text class="name">{{name}}</text>
+        <text class="month">{{cycle}}</text>
+      </view>
+      <view class="row_2">
+        <text class="enName">{{enName}}</text>
+      </view>
+    </view>
+    <view class="footer">
+      <view class="if">
+        <view class="if_1">复合影响因子：{{fif}}</view>
+        <view class="if_2">综合影响因子：{{zif}}</view>
+      </view>
+      <text wx:if="{{sub}}" class="subscribe_2" catchtap="delete_sub" data-name="{{name}}">已订阅</text>
+      <text wx:else class="subscribe" catchtap="add_sub" data-name="{{name}}">+订阅</text>
+    </view>
+  </view>
+</view>

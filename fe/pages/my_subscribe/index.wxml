@@ -1,0 +1,28 @@
+<view class="my_periodical">
+  <view class="header">
+    <image src="../../icons/my_subscribe/my_periodical.png" class="my_periodical_icon"></image>
+    <text>我的期刊</text>
+  </view>
+  <ul class="periodicalList">
+    <view  wx:for="{{periodicalList}}" wx:key="name" >
+      <Cover name="{{item.name}}" if="{{item.zif}}" img="{{item.img}}"></Cover>
+    </view>
+    <view class="periodical_add" bindtap="jump_periodical_navi">
+      <image src="../../icons/my_subscribe/add.png"></image>
+      <text>添加期刊</text>
+    </view>
+  </ul>
+</view>
+<view class="my_keywords">
+  <view class="header">
+    <image src="../../icons/my_subscribe/my_keywords.png" class="my_keywords_icon"></image>
+    <text>我的关键词</text>
+  </view>
+  <ul class="keywordsList">
+    <li wx:for="{{keywordList}}" wx:key="item">{{item}}</li>
+    <li class="keywords_add" bindtap="jump_add_keywords">
+      <image src="../../icons/my_subscribe/add.png"></image>
+      <text>添加关键词</text>
+    </li>
+  </ul>
+</view>

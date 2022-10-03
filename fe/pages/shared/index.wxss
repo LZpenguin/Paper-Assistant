@@ -1,0 +1,12 @@
+page {
+  background-color: #F0F1F5;
+}
+.box {
+  padding: 8rpx 32rpx 24rpx;
+}
+.sharedList>li{
+  display: block;
+  height: 218rpx;
+  background-color: #fff;
+  margin-bottom: 8rpx;
+}

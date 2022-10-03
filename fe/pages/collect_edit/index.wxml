@@ -1,0 +1,30 @@
+<view class="recent" bindtap="jump" data-name="默认收藏">
+  <text class="name">默认收藏</text>
+  <text class="default">默认置顶</text>
+</view>
+<view class="folder_edit">
+  <text class="edit_name">创建文件夹</text>
+  <text wx:if="{{edit}}" class="edit_save" bindtap="to_save">保存</text>
+  <text wx:else class="edit_func" bindtap="to_edit">编辑</text>
+</view>
+<ul class="folderList">
+  <view wx:if="{{mvo !=-1}}" class="list_cover" style="height: {{folderList.length*47-4}}px"></view>
+  <view class="fake" style="top:{{fake.top}}px">
+    <li wx:if="{{mvo !=-1}}" style="top: {{fake.top}}" data-name="{{fake.name}}">
+      <text class="folder_delete">{{'删除'}}</text>
+      <text class="folder_name">{{fake.name}}</text>
+      <text class="space"></text>
+      <view class="folder_func">
+        <image src="../../icons/collect_edit/folder_func2.png"></image>
+      </view>
+    </li>
+  </view>
+  <li wx:for="{{folderList}}" wx:key="item"  bindtap="jump" data-name="{{item.name}}">
+    <text wx:if="{{edit}}" class="folder_delete" catchtap="delete" data-index="{{index}}">删除</text>
+    <text class="folder_name">{{item.name}}</text>
+    <text class="space"></text>
+    <view wx:if="{{edit}}" class="folder_func" bindtouchstart="mvs" bindtouchmove="mv" bindtouchend="mve" data-name="{{item.name}}" data-index="{{index}}">
+      <image src="../../icons/collect_edit/folder_func2.png"></image>
+    </view>
+  </li>
+</ul>

@@ -1,0 +1,14 @@
+<view class="card" bindtap="jump_detail" data-id="{{paper_id}}">
+    <view class="src">
+      <image src="../../icons/public/periodical.png"></image>
+      <view class="name">{{magazine}}</view>
+      <view class="no">{{year}}/第{{issue}}期</view>
+    </view>
+    <view class="r_title">
+      {{title}}
+    </view>
+    <ul class="author">
+      <image src="../../icons/public/author.png"></image>
+      <li wx:for="{{authors}}" wx:key="item2" wx:for-item="item2">{{item2}}</li>
+    </ul>
+</view>

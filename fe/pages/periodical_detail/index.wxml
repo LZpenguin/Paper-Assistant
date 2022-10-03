@@ -1,0 +1,59 @@
+<view class="periodical_card">
+  <image src="{{periodical.img}}" class="cover"></image>
+  <view class="info">
+    <view class="name">
+      <view class="ch_name">{{periodical.name}}</view>
+      <view class="en_name">{{periodical.enName}}</view>
+    </view>
+    <text wx:if="{{periodical.sub}}" class="subscribe_2" bindtap="delete_sub" data-name="{{periodical.name}}">已订阅</text>
+    <text wx:else class="subscribe" bindtap="add_sub" data-name="{{periodical.name}}">+订阅</text>
+  </view>
+</view>
+<view class="basic_info">
+  <view class="header">基本信息</view>
+  <ul class="body">
+    <li>
+      <text class="key">曾用刊名 ：</text>
+      <text class="value">{{periodical.name}}</text>
+    </li>
+    <li>
+      <text class="key">主办单位 ：</text>
+      <text class="value">{{periodical.unit}}</text>
+    </li>
+    <li>
+      <text class="key">出版周期 ：</text>
+      <text class="value">{{periodical.cycle}}</text>
+    </li>
+  </ul>
+</view>
+<view class="publish_info">
+  <view class="header">出版信息</view>
+  <ul class="body">
+    <li>
+      <text class="key">专辑名称 ：</text>
+      <text class="value">{{periodical.issueName}}</text>
+    </li>
+    <li>
+      <text class="key">专题名称 ：</text>
+      <text class="value">{{periodical.topicName}}</text>
+    </li>
+    <li>
+      <text class="key">出版文献量 ：</text>
+      <text class="value">2355篇</text>
+    </li>
+  </ul>
+</view>
+<view class="assess_info">
+  <view class="header">评价信息</view>
+  <ul class="body">
+    <li>
+      <text class="key">(2020)复合影响因子 ：</text>
+      <text class="value">{{periodical.fif}}</text>
+    </li>
+    <li>
+      <text class="key">(2020)综合影响因子 ：</text>
+      <text class="value">{{periodical.zif}}</text>
+    </li>
+  </ul>
+</view>
+

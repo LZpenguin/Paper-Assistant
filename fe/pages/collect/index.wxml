@@ -1,0 +1,59 @@
+<view class="search_box">
+  <view class="box">
+    <Search title="搜索收藏的文献" enable="false" jump="/pages/collect_seach/index"></Search>
+  </view>
+  <image class="add_folder_icon" src="../../icons/collect/folder.png" bindtap="add_folder"></image>
+</view>
+<view class="collectFolders">
+  <ul class="folderList">
+    <li wx:for="{{folderList}}" wx:key="name" class="{{index == selected ? 'selected' : ''}}" data-index="{{index}}" bindtap="change">
+      {{item.name}}
+    </li>
+  </ul>
+  <image class="folder_icon" src="../../icons/collect/folder_func1.png" bindtap="jump_collect_edit"></image>
+</view>
+<ul class="cardList">
+  <li wx:for="{{paperList}}" wx:key="name">
+    <Card magazine="{{item.magazine}}" year="{{item.year}}" issue="{{item.issue}}" paper_id="{{item.id}}" title="{{item.title}}" authors="{{item.authors}}"></Card>
+    <view class="dot_box" bindtap="dotTap" data-id="{{item.id}}">
+      <view class="{{item.choosen?'dot-on':'dot-off'}}"></view>
+    </view> 
+  </li>
+</ul>
+<view class="add_folder_box" wx:if="{{to_add_folder}}">
+  <view class="cover"></view>
+  <view class="add_folder">
+    <view class="title">请输入文件夹名称</view>
+    <input type="text" placeholder="文件夹名称不超过8个字" bindinput="bindInput"/>
+    <view class="func">
+      <text class="cancel" bindtap="cancel_add_folder">取消</text>
+      <text class="submit" bindtap="new_folder">创建</text>
+    </view>
+  </view>
+</view>
+
+<view class="to_move_group" wx:if="{{to_move}}">
+  <view class="cover"></view>
+  <view class="to_collect">
+    <view class="header">
+      <text class="count">将 {{count}} 个文件移动到</text>
+      <image class="cancel" src="../../icons/components/cancel.png" bindtap="cancel_move"></image>
+    </view>
+    <view class="folderList">
+      <view class="folder" wx:for="{{folderList}}" wx:key="name" bindtap="move_to" data-name="{{item.name}}">
+        <image class="folder_icon" src="../../icons/components/folder.png"></image>
+        <view class="info">
+          <view class="folder_name">{{item.name}}</view>
+          <view class="folder_info">
+            <view class="folder_count">收藏{{item.content.length}}篇</view>
+            <view class="update_time">更新于：今日</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="footer">
+      <image src="../../icons/components/new.png"></image>
+      <text>新建文件夹</text>
+    </view>
+  </view>
+</view>

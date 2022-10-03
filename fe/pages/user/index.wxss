@@ -1,0 +1,66 @@
+page {
+    background-color: #F0F1F5
+}
+.avatar_border {
+  margin: 40rpx auto 24rpx;
+  width: 176rpx;
+  height: 176rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.avatar {
+  display: block;
+  width: 176rpx;
+  height: 176rpx;
+}
+.nickname {
+  display: block;
+  text-align: center;
+  font-size: 36rpx;
+  color: #464646;
+  margin-bottom: 80rpx;
+}
+.navigator_box {
+  background-color: #fff;
+  padding: 0 24rpx;
+}
+.navigator_box .my_subscribe,
+.navigator_box .shared {
+  display: flex;
+  align-items: center;
+  font-size: 32rpx;
+  height: 94rpx;
+  line-height: 94rpx;
+}
+.navigator_box .about_us {
+  display: flex;
+  align-items: center;
+  font-size: 32rpx;
+  height: 94rpx;
+  line-height: 94rpx;
+}
+.navigator_box .my_subscribe image:first-child {
+  width: 32rpx;
+  height: 40rpx;
+  margin-right: 22rpx;
+}
+.navigator_box .shared image:first-child {
+  width: 36.5rpx;
+  height: 36.5rpx;
+  margin-right: 20rpx;
+}
+.navigator_box .about_us image:first-child {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 18rpx;
+}
+.navigator_box text {
+  flex: 1 1 0;
+  border-bottom: 3rpx solid #F0F1F5;
+}
+.navigator_box .bigger_than {
+  display: block;
+  width: 14rpx;
+  height: 28rpx;
+  margin-right: 0;
+}

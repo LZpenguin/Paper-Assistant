@@ -1,0 +1,120 @@
+<view class="page">
+  <view class="header">
+    <text class="title">{{paper.title}}</text>
+    <image src="../../icons/public/func-more.png" class="func-more"></image>
+  </view>
+  <ul class="author">
+    <image src="../../icons/public/author.png"></image>
+    <li wx:for="{{paper.authors}}" wx:key="item">{{item}}</li>
+  </ul>
+  <view class="periodical" bindtap="jump_periodical_detail" data-magazine="{{paper.magazine}}">
+    <image class="periodical_cover" src="{{paper.img}}"></image>
+    <view class="periodical_info">
+      <view class="info_header">
+        <text class="periodical_title">《{{paper.magazine_fixed}}》</text>
+        <text class="periodical_no">{{paper.year}}/第{{paper.issue}}期</text>
+      </view>
+      <view class="info_footer">
+        <text class="ranking" wx:if="{{showRank}}">排名前三</text>
+        <text class="impact_factor">影响因子{{paper.zif}}</text>
+        <text wx:if="{{paper.magazineSub}}" class="func_subscribe_2" catchtap="delete_sub" data-name="{{paper.magazine}}">已订阅</text>
+        <text wx:else class="func_subscribe" catchtap="add_sub" data-name="{{paper.magazine}}">+订阅</text>
+      </view>
+    </view>
+  </view>
+  <view class="content">
+    {{paper.intro}}
+  </view>
+  <view class="keywords">
+    <view class="key">
+      <image src="../../icons/detail/key.png"></image>
+      <text>关键词</text>
+    </view>
+    <ul class="words">
+      <li wx:for="{{paper.keywords}}" wx:key="item">{{item}}</li>
+    </ul>
+  </view>
+  <view class="func">
+    <view class="doi" bindtap="copy_doi">
+      <image src="../../icons/detail/doi.png"></image>
+      复制标题
+    </view>
+    <view class="link" bindtap="link_to" data-link="{{paper.url}}">
+      <image src="../../icons/detail/link.png"></image>
+      全文链接
+    </view>
+  </view>
+</view>
+<view class="relative_papers">
+  <view class="relative">
+    <image src="../../icons/detail/relative.png"></image>
+    相关文献
+  </view>
+  <ul class="papers">
+    <li wx:for="{{paper.suggest}}" wx:key="id" bindtap="jump_detail" data-id="{{item.id}}">
+        <view class="src">
+          <image src="../../icons/public/periodical.png"></image>
+          <text class="name">{{item.magazine}}</text>
+          <text class="periodical_no">{{item.year}}/第{{item.issue}}期</text>
+        </view>
+        <view class="r_title">
+          {{item.title}}
+        </view>
+        <ul class="author">
+          <image src="../../icons/public/author.png"></image>
+          <li wx:for="{{item.authors}}" wx:key="item" wx:for-item="item2">{{item2}}</li>
+        </ul>
+    </li>
+  </ul>
+</view>
+
+<movable-area class="movable-area">
+  <movable-view class="movable-view" direction="all" scale="false" x="{{btn_collect[0]}}rpx" y="{{btn_collect[1]}}rpx">
+    <image  class="btn_collect" src="../../icons/detail/{{paper.fav?'btn_collect.png':'btn_collect_o.png'}}" bindtouchend="to_right" data-name="0" bindtap="{{paper.fav?'cancel_collect':'add_collect'}}" data-id="{{paper.id}}"></image>
+  </movable-view>
+  <movable-view class="movable-view" direction="all" scale="false" x="{{btn_share[0]}}rpx" y="{{btn_share[1]}}rpx" bindtouchend="to_right" data-name="1">
+    <button class="shareMessageBtn" open-type="share">
+      <image class="btn_share" src="../../icons/detail/btn_share.png"></image>
+    </button>
+  </movable-view>
+</movable-area>
+
+<view class="to_collect_group" wx:if="{{to_collect}}">
+  <view class="cover"></view>
+  <view class="to_collect">
+    <view class="header">
+      <text class="count">将 1 个文件添加到收藏夹</text>
+      <image class="cancel" src="../../icons/components/cancel.png" bindtap="cancel_add_collect"></image>
+    </view>
+    <view class="folderList">
+      <view class="folder" wx:for="{{folderList}}" wx:key="name" bindtap="collect_to" data-name="{{item.name}}">
+        <image class="folder_icon" src="../../icons/components/folder.png"></image>
+        <view class="info">
+          <view class="folder_name">{{item.name}}</view>
+          <view class="folder_info">
+            <view class="folder_count">收藏{{item.content.length}}篇</view>
+            <view class="update_time">更新于：今日</view>
+          </view>
+        </view>
+      </view> 
+    </view>
+    <view class="footer" bindtap="to_add_folder">
+      <image src="../../icons/components/new.png"></image>
+      <text>新建文件夹</text>
+    </view>
+  </view>
+</view>
+
+<!-- to_add_folder -->
+<view class="add_folder_box" wx:if="{{to_add_folder}}">
+  <view class="cover"></view>
+  <view class="add_folder">
+    <view class="title">请输入文件夹名称</view>
+    <input type="text" placeholder="文件夹名称不超过8个字" bindinput="bindInput"/>
+    <view class="func">
+      <text class="cancel" bindtap="cancel_add_folder">取消</text>
+      <text class="submit" bindtap="new_folder">创建</text>
+    </view>
+  </view>
+</view>
+

@@ -1,0 +1,89 @@
+page {
+  background-color: #F0F1F5;
+}
+.recent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 86rpx;
+  padding: 0 32rpx;
+  background-color: #fff;
+}
+.recent .name {
+  font-size: 32rpx;
+}
+.recent .default {
+  font-size: 28rpx;
+  color: #C4C4C4;
+}
+.folder_edit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 86rpx;
+  padding: 0 32rpx;
+  font-size: 28rpx;
+}
+.folder_edit .edit_name {
+  color: #888888;
+}
+.folder_edit .edit_func {
+  color: #627AF8;
+  padding: 3rpx 16rpx 5rpx;
+  border: 2rpx solid #627AF8;
+  border-radius: 40rpx;
+}
+.folder_edit .edit_save {
+  color: #fff;
+  padding: 3rpx 16rpx 5rpx;
+  background-color: #627AF8;
+  border: 2rpx solid #627AF8;
+  border-radius: 40rpx;
+}
+.folderList {
+  position: relative;
+}
+.folderList li {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  height: 86rpx;
+  padding: 0 32rpx;
+  margin-bottom: 8rpx;
+  background-color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.folderList li .folder_delete {
+  margin-right: 32rpx;
+  color: #FF6C7E;
+}
+.folderList li .space {
+  flex: 1 1 0;
+}
+.folderList li .folder_func {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 80rpx;
+  height: 100%;
+}
+.folderList li .folder_func>image {
+  width: 32rpx;
+  height: 20rpx;
+}
+.fake {
+  z-index: 3;
+  position: absolute;
+  width: 750rpx;
+  left: 0;
+  top: 0;
+} 
+.list_cover {
+  z-index: 2;
+  position: absolute;
+  width: 750rpx;
+  left: 0;
+  top: 0;
+  background-color: rgba(240,240,240,.4);
+}

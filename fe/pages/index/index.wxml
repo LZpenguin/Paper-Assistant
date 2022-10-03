@@ -1,0 +1,47 @@
+<!-- <view wx:if="{{!userInfo}}" catchtap="getUserProfile" class="getUserProfile"></view> -->
+
+<view class="page" bindtap="getUserProfile">
+  <ul class="paperList">
+    <li wx:for="{{paperList}}" wx:key="id" class="paper">
+      <view class="header" bindtap="jump_periodical_detail" data-magazine="{{item.magazine}}">
+        <image src="{{item.img}}" class="cover"/>
+        <view class="name">{{item.magazine}}</view>
+        <view class="no">{{item.year}}/第{{item.issue}}期</view>
+      </view>
+      <view class="title" bindtap="jump_detail" data-id="{{item.id}}">{{item.title}}</view>
+      <view class="abstract" bindtap="jump_detail" data-id="{{item.id}}">{{item.intro}}</view>
+      <view class="footer">
+        <image src="../../icons/public/author.png" class="icon_author"></image>
+        <view class="author">
+          <li wx:for="{{item.authors}}" wx:key="index" wx:for-item="item2">{{item2}}</li>
+        </view>
+        <view class="space"></view>
+        <view class="func">
+          <image wx:if="{{item.fav}}" src="../../icons/index/func-collect-1.png" class="func_collect" bindtap="cancel_collect" data-id="{{item.id}}"></image>
+          <image wx:else src="../../icons/index/func-collect-0.png" class="func_collect" bindtap="add_collect" data-id="{{item.id}}"></image>
+          <image src="../../icons/public/func-more.png" class="func_more"></image>
+        </view>
+      </view>
+    </li>
+  </ul>
+  <view class="loading_box" wx:if="{{loading}}">
+    <image class="loading" src="../../icons/loading.png"></image>
+  </view>
+</view>
+
+<view wx:if="{{paperList.length == 0}}" class="guide_box" bindtap="getUserProfile">
+  <view class="guide_card">
+    <view class="text">
+      首先去订阅期刊,
+    </view>
+    <view class="text">
+      接着我们会推送订阅期刊中的文献
+    </view>
+    <view class="jump_button" bindtap="jump_periodical_navi">去订阅期刊</view>
+  </view>
+  <view class="guide_preview">
+    <image src="../../icons/index/guide.png"></image>
+    <view class="linear_cover"></view>
+  </view>
+</view>
+

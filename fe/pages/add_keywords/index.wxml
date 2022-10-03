@@ -1,0 +1,10 @@
+<view class="search_box">
+  <Search title="搜索关键词" bind:searchValue="getValue"></Search>
+</view>
+<view class="keywords_box">
+  <view class="keyword" wx:for="{{keywordList}}" wx:key="name">
+    <text class="name_keyword">{{item.text}}</text>
+    <text class="delete_keyword" wx:if="{{item.sub}}" bindtap="delete_key" data-key="{{item.text}}">已添加</text>
+    <text class="add_keyword" wx:else bindtap="add_key" data-key="{{item.text}}">+ 添加</text>
+  </view>
+</view>

@@ -1,0 +1,5 @@
+<view class="cover" bindtap="jump_periodical_detail" data-magazine="{{name}}">
+  <image src="{{img}}"></image>
+  <text>{{name}}</text>
+  <view class="impact_factor">影响因子{{if}}</view>
+</view>
