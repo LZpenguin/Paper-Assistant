@@ -164,15 +164,11 @@ MVP只做期刊
 
 初始化机制
 
-![img](https://bingyan.feishu.cn/space/api/box/stream/download/asynccode/?code=NzAxNjk1ZTEwOWEyZTAyN2NkOWRkOGQyNDM0MWZmMjdfSVBhakdkaHRuTTRVZUZCRzZUMFlDZW82cmQzcmxOMmpfVG9rZW46Ym94Y25hcW9iUG5FZHB4WFo3ck9RT2xBTm1jXzE2NjQ3Nzk1Nzk6MTY2NDc4MzE3OV9WNA)
+![Snipaste_2022-10-04_16-27-14](imgs/Snipaste_2022-10-04_16-27-14.png)
 
+![Snipaste_2022-10-04_16-27-48](imgs/Snipaste_2022-10-04_16-27-48.png)
 
-
-![img](https://bingyan.feishu.cn/space/api/box/stream/download/asynccode/?code=NmU1NTczYmViODYyYmM2Y2RhNjViY2M5MjM3ZjY2ZDdfVTBZM25qTzU1TktGNnF5Q3RaNXh5MkQwcE1vNTJvUDlfVG9rZW46Ym94Y255RFJhdUJBZlRNVllObTdsd09HUU5jXzE2NjQ3Nzk1Nzk6MTY2NDc4MzE3OV9WNA)
-
-
-
-![img](https://bingyan.feishu.cn/space/api/box/stream/download/asynccode/?code=YzBjZTQ1MDdmMzA5ZTg3ODcyMGRlYzUzMDNhOWRjYTRfWTZXeks4MVhVYzFjQ0o2T1MwYm5PaVBhTGN6c2hRdVFfVG9rZW46Ym94Y25BR3JwMlZndVdrVHNXOE9FUFA5SkRjXzE2NjQ3Nzk1Nzk6MTY2NDc4MzE3OV9WNA)
+![Snipaste_2022-10-04_16-27-54](imgs/Snipaste_2022-10-04_16-27-54.png)
 
 
 
